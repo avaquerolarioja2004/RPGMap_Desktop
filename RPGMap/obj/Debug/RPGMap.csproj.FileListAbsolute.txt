@@ -1,0 +1,23 @@
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\RPGMap.exe.config
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\RPGMap.exe
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\RPGMap.pdb
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.AssemblyReference.cache
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.Properties.Resources.resources
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.GenerateResource.cache
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.CoreCompileInputs.cache
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.exe
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.pdb
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\EntityFramework.dll
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\EntityFramework.xml
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.CopyComplete
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.Generar.resources
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\res\font\AnyConv.com__DRAGON HUNTER (1).ttf
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\res\font\AnyConv.com__Vecna (1).ttf
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.RPGMap.resources
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\obj\Debug\RPGMap.Map.resources
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\System.Data.SQLite.dll
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\mrpox\OneDrive\Escritorio\proyectos_MULWEB\RPGMap\RPGMap\bin\Debug\System.Data.SQLite.xml
