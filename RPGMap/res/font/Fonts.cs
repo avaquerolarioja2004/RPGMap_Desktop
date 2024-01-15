@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RPGMap
 {
-    class Utilities
+    class Fonts
     {
         private PrivateFontCollection privateFont = new PrivateFontCollection();
         private Font fontButton;
@@ -16,8 +16,9 @@ namespace RPGMap
         private Font fontTittleVecna;
         private Font fontText;
         private Font fontButtonMini;
+        private Font fontButtonSelectCont;
 
-        public Utilities()
+        public Fonts()
         {
             privateFont.AddFontFile("res\\font\\AnyConv.com__Vecna (1).ttf");
             privateFont.AddFontFile("res\\font\\AnyConv.com__DRAGON HUNTER (1).ttf");
@@ -26,8 +27,13 @@ namespace RPGMap
             fontTittleVecna = new Font(privateFont.Families[1], 48);
             fontText = new Font(privateFont.Families[1], 24);
             fontButtonMini = new Font(privateFont.Families[1], 26);
+            fontButtonSelectCont = new Font(privateFont.Families[1], 14);
         }
 
+        public Font getFontBttContent()
+        {
+            return fontButtonSelectCont;
+        }
         public Font getFontBtt()
         {
             return fontButton;

@@ -76,8 +76,6 @@ namespace RPGMap.dbRPGMap
 
                 connection.Close();
             }
-
-            Console.WriteLine("Tablas 'room_table', 'enemy_table', 'object_table' y 'furniture_table' creadas con éxito.");
         }
 
         public string GetDatabasePath()

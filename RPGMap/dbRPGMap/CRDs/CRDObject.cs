@@ -21,20 +21,16 @@ namespace RPGMap.dbRPGMap
                         // Si no existe, entonces agregar y guardar cambios
                         dbContext.objectsTable.Add(objectTable);
                         dbContext.SaveChanges();
-
-                        Console.WriteLine("Objeto creado con éxito.");
                         return true;
                     }
                     else
                     {
-                        Console.WriteLine("Objeto ya existe en la base de datos.");
                         return false;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al crear el objeto: {ex.Message}");
                 return false;
             }
         }
@@ -67,17 +63,13 @@ namespace RPGMap.dbRPGMap
                     {
                         dbContext.objectsTable.Remove(existingObject);
                         dbContext.SaveChanges();
-                        Console.WriteLine("Objeto eliminado con éxito.");
                         return true; // Eliminación exitosa
                     }
-
-                    Console.WriteLine("Objeto no encontrado en la base de datos.");
                     return false; // El objeto no fue encontrado
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al eliminar el objeto: {ex.Message}");
                 return false; // La eliminación falló
             }
         }

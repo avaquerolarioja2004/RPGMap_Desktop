@@ -21,20 +21,16 @@ namespace RPGMap.dbRPGMap
                         // Si no existe, entonces agregar y guardar cambios
                         dbContext.enemiesTable.Add(enemyTable);
                         dbContext.SaveChanges();
-
-                        Console.WriteLine("Enemigo creado con éxito.");
                         return true;
                     }
                     else
                     {
-                        Console.WriteLine("Enemigo ya existe en la base de datos.");
                         return false;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al crear el enemigo: {ex.Message}");
                 return false;
             }
         }
@@ -67,17 +63,13 @@ namespace RPGMap.dbRPGMap
                     {
                         dbContext.enemiesTable.Remove(existingEnemy);
                         dbContext.SaveChanges();
-                        Console.WriteLine("Enemigo eliminado con éxito.");
                         return true; // Eliminación exitosa
                     }
-
-                    Console.WriteLine("Enemigo no encontrado en la base de datos.");
                     return false; // El enemigo no fue encontrado
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al eliminar el enemigo: {ex.Message}");
                 return false; // La eliminación falló
             }
         }

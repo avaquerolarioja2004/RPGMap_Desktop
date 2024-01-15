@@ -65,6 +65,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Content.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content.Designer.cs">
+      <DependentUpon>Content.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentEnemy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentEnemy.Designer.cs">
+      <DependentUpon>ContentEnemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentFurniture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentFurniture.Designer.cs">
+      <DependentUpon>ContentFurniture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentObject.Designer.cs">
+      <DependentUpon>ContentObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentRoom.Designer.cs">
+      <DependentUpon>ContentRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbRPGMap\auxTables\AuxFurniture.cs" />
+    <Compile Include="dbRPGMap\auxTables\AuxObject.cs" />
+    <Compile Include="dbRPGMap\auxTables\AuxRoom.cs" />
     <Compile Include="dbRPGMap\CRDs\CRDEnemy.cs" />
     <Compile Include="dbRPGMap\CRDs\CRDFurniture.cs" />
     <Compile Include="dbRPGMap\CRDs\CRDObject.cs" />
@@ -81,6 +114,30 @@
     <Compile Include="Generar.Designer.cs">
       <DependentUpon>Generar.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoContEnemy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoContEnemy.Designer.cs">
+      <DependentUpon>InfoContEnemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoContentFurniture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoContentFurniture.Designer.cs">
+      <DependentUpon>InfoContentFurniture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoContentObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoContentObject.Designer.cs">
+      <DependentUpon>InfoContentObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoContentRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoContentRoom.Designer.cs">
+      <DependentUpon>InfoContentRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,17 +150,81 @@
     <Compile Include="Map.Designer.cs">
       <DependentUpon>Map.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUpBorrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpBorrado.Designer.cs">
+      <DependentUpon>PopUpBorrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpOutGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpOutGen.Designer.cs">
+      <DependentUpon>PopUpOutGen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="res\Utilities.cs" />
+    <Compile Include="res\buttons\BttDataBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\buttons\ButtonAddCont.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\buttons\ButtonConfigContent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\buttons\ButtonsMoveInContent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\contenedor\ContDB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\Methods.cs" />
+    <Compile Include="res\buttons\TriButtonConfigContent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\font\Fonts.cs" />
+    <EmbeddedResource Include="Content.resx">
+      <DependentUpon>Content.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentEnemy.resx">
+      <DependentUpon>ContentEnemy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentFurniture.resx">
+      <DependentUpon>ContentFurniture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentObject.resx">
+      <DependentUpon>ContentObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentRoom.resx">
+      <DependentUpon>ContentRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Generar.resx">
       <DependentUpon>Generar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoContEnemy.resx">
+      <DependentUpon>InfoContEnemy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoContentFurniture.resx">
+      <DependentUpon>InfoContentFurniture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoContentObject.resx">
+      <DependentUpon>InfoContentObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoContentRoom.resx">
+      <DependentUpon>InfoContentRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpBorrado.resx">
+      <DependentUpon>PopUpBorrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpOutGen.resx">
+      <DependentUpon>PopUpOutGen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,6 +262,9 @@
     <Content Include="res\imagenes\arrow_down.png" />
     <Content Include="res\imagenes\arrow_left.png" />
     <Content Include="res\imagenes\boton_aniadir.png" />
+    <Content Include="res\imagenes\info_grande.png" />
+    <None Include="res\imagenes\boton_aniadir_grande.png" />
+    <Content Include="res\imagenes\bttContentGen.png" />
     <Content Include="res\imagenes\camara.png" />
     <Content Include="res\imagenes\check.png" />
     <Content Include="res\imagenes\icono_calavera.png" />
@@ -152,8 +276,10 @@
     <Content Include="res\imagenes\logo.png" />
     <Content Include="res\imagenes\rectangle.png" />
     <Content Include="res\imagenes\rectangle_mini.png" />
+    <Content Include="res\imagenes\rectangle_mini_mini.png" />
     <Content Include="res\imagenes\tittle.png" />
     <Content Include="res\imagenes\untitled.png" />
+    <Content Include="res\imagenes\popup.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

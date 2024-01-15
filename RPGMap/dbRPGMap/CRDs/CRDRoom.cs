@@ -24,20 +24,16 @@ namespace RPGMap.dbRPGMap
                         RoomTable nuevaSala = new RoomTable(x, y);
                         dbContext.roomsTable.Add(nuevaSala);
                         dbContext.SaveChanges();
-
-                        Console.WriteLine("Sala creada con éxito.");
                         return true;
                     }
                     else
                     {
-                        Console.WriteLine("Sala ya existe en la base de datos.");
                         return false;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al crear la sala: {ex.Message}");
                 return false;
             }
         }
@@ -72,7 +68,6 @@ namespace RPGMap.dbRPGMap
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al eliminar la sala: {ex.Message}");
                 return false; // La eliminación falló
             }
         }

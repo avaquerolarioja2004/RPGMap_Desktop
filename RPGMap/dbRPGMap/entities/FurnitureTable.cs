@@ -40,6 +40,15 @@ namespace RPGMap.dbRPGMap.entities
         public FurnitureTable()
         {
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is FurnitureTable table &&
+                   Name == table.Name &&
+                   X == table.X &&
+                   Y == table.Y &&
+                   CoversVisibility == table.CoversVisibility;
+        }
     }
 }
 

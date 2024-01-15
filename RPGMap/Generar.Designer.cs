@@ -61,6 +61,10 @@ namespace RPGMap
             this.sDoor = new System.Windows.Forms.Label();
             this.bttDownSDoor = new System.Windows.Forms.Button();
             this.bttUpSDoor = new System.Windows.Forms.Button();
+            this.bttContentEnemies = new System.Windows.Forms.Button();
+            this.bttContentRooms = new System.Windows.Forms.Button();
+            this.bttContentObjects = new System.Windows.Forms.Button();
+            this.bttContentFurniture = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbTittle
@@ -191,6 +195,7 @@ namespace RPGMap
             this.bttDownDif.Size = new System.Drawing.Size(38, 23);
             this.bttDownDif.TabIndex = 31;
             this.bttDownDif.UseVisualStyleBackColor = false;
+            this.bttDownDif.Click += new System.EventHandler(this.bttDownDif_Click);
             this.bttDownDif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttDownDif_MouseDown);
             this.bttDownDif.MouseEnter += new System.EventHandler(this.bttDownDif_MouseEnter);
             this.bttDownDif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttDownDif_MouseUp);
@@ -207,6 +212,7 @@ namespace RPGMap
             this.bttUpDif.Size = new System.Drawing.Size(38, 23);
             this.bttUpDif.TabIndex = 30;
             this.bttUpDif.UseVisualStyleBackColor = false;
+            this.bttUpDif.Click += new System.EventHandler(this.bttUpDif_Click);
             this.bttUpDif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttUpDif_MouseDown);
             this.bttUpDif.MouseEnter += new System.EventHandler(this.bttUpDif_MouseEnter);
             this.bttUpDif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttUpDif_MouseUp);
@@ -398,6 +404,10 @@ namespace RPGMap
             this.bttDownCorr.Size = new System.Drawing.Size(38, 23);
             this.bttDownCorr.TabIndex = 38;
             this.bttDownCorr.UseVisualStyleBackColor = false;
+            this.bttDownCorr.Click += new System.EventHandler(this.bttDownCorr_Click);
+            this.bttDownCorr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttDownCorr_MouseDown);
+            this.bttDownCorr.MouseEnter += new System.EventHandler(this.bttDownCorr_MouseEnter);
+            this.bttDownCorr.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttDownCorr_MouseUp);
             // 
             // bttUpCorr
             // 
@@ -411,6 +421,10 @@ namespace RPGMap
             this.bttUpCorr.Size = new System.Drawing.Size(38, 23);
             this.bttUpCorr.TabIndex = 37;
             this.bttUpCorr.UseVisualStyleBackColor = false;
+            this.bttUpCorr.Click += new System.EventHandler(this.bttUpCorr_Click);
+            this.bttUpCorr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttUpCorr_MouseDown);
+            this.bttUpCorr.MouseEnter += new System.EventHandler(this.bttUpCorr_MouseEnter);
+            this.bttUpCorr.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttUpCorr_MouseUp);
             // 
             // sDoor
             // 
@@ -419,9 +433,9 @@ namespace RPGMap
             this.sDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sDoor.Location = new System.Drawing.Point(856, 593);
             this.sDoor.Name = "sDoor";
-            this.sDoor.Size = new System.Drawing.Size(31, 33);
+            this.sDoor.Size = new System.Drawing.Size(57, 33);
             this.sDoor.TabIndex = 42;
-            this.sDoor.Text = "0";
+            this.sDoor.Text = "0%";
             // 
             // bttDownSDoor
             // 
@@ -434,6 +448,10 @@ namespace RPGMap
             this.bttDownSDoor.Size = new System.Drawing.Size(38, 23);
             this.bttDownSDoor.TabIndex = 41;
             this.bttDownSDoor.UseVisualStyleBackColor = false;
+            this.bttDownSDoor.Click += new System.EventHandler(this.bttDownSDoor_Click);
+            this.bttDownSDoor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttDownSDoor_MouseDown);
+            this.bttDownSDoor.MouseEnter += new System.EventHandler(this.bttDownSDoor_MouseEnter);
+            this.bttDownSDoor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttDownSDoor_MouseUp);
             // 
             // bttUpSDoor
             // 
@@ -447,6 +465,66 @@ namespace RPGMap
             this.bttUpSDoor.Size = new System.Drawing.Size(38, 23);
             this.bttUpSDoor.TabIndex = 40;
             this.bttUpSDoor.UseVisualStyleBackColor = false;
+            this.bttUpSDoor.Click += new System.EventHandler(this.bttUpSDoor_Click);
+            this.bttUpSDoor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bttUpSDoor_MouseDown);
+            this.bttUpSDoor.MouseEnter += new System.EventHandler(this.bttUpSDoor_MouseEnter);
+            this.bttUpSDoor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bttUpSDoor_MouseUp);
+            // 
+            // bttContentEnemies
+            // 
+            this.bttContentEnemies.BackColor = System.Drawing.Color.Transparent;
+            this.bttContentEnemies.FlatAppearance.BorderSize = 0;
+            this.bttContentEnemies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttContentEnemies.Image = global::RPGMap.Properties.Resources.bttContentGen;
+            this.bttContentEnemies.Location = new System.Drawing.Point(855, 202);
+            this.bttContentEnemies.Name = "bttContentEnemies";
+            this.bttContentEnemies.Size = new System.Drawing.Size(34, 35);
+            this.bttContentEnemies.TabIndex = 43;
+            this.bttContentEnemies.UseVisualStyleBackColor = false;
+            this.bttContentEnemies.Click += new System.EventHandler(this.bttContentEnemies_Click);
+            this.bttContentEnemies.MouseEnter += new System.EventHandler(this.bttContentEnemies_MouseEnter);
+            // 
+            // bttContentRooms
+            // 
+            this.bttContentRooms.BackColor = System.Drawing.Color.Transparent;
+            this.bttContentRooms.FlatAppearance.BorderSize = 0;
+            this.bttContentRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttContentRooms.Image = global::RPGMap.Properties.Resources.bttContentGen;
+            this.bttContentRooms.Location = new System.Drawing.Point(855, 278);
+            this.bttContentRooms.Name = "bttContentRooms";
+            this.bttContentRooms.Size = new System.Drawing.Size(34, 35);
+            this.bttContentRooms.TabIndex = 44;
+            this.bttContentRooms.UseVisualStyleBackColor = false;
+            this.bttContentRooms.Click += new System.EventHandler(this.bttContentRooms_Click);
+            this.bttContentRooms.MouseEnter += new System.EventHandler(this.bttContentRooms_MouseEnter);
+            // 
+            // bttContentObjects
+            // 
+            this.bttContentObjects.BackColor = System.Drawing.Color.Transparent;
+            this.bttContentObjects.FlatAppearance.BorderSize = 0;
+            this.bttContentObjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttContentObjects.Image = global::RPGMap.Properties.Resources.bttContentGen;
+            this.bttContentObjects.Location = new System.Drawing.Point(855, 436);
+            this.bttContentObjects.Name = "bttContentObjects";
+            this.bttContentObjects.Size = new System.Drawing.Size(34, 35);
+            this.bttContentObjects.TabIndex = 46;
+            this.bttContentObjects.UseVisualStyleBackColor = false;
+            this.bttContentObjects.Click += new System.EventHandler(this.bttContentObjects_Click);
+            this.bttContentObjects.MouseEnter += new System.EventHandler(this.bttContentObjects_MouseEnter);
+            // 
+            // bttContentFurniture
+            // 
+            this.bttContentFurniture.BackColor = System.Drawing.Color.Transparent;
+            this.bttContentFurniture.FlatAppearance.BorderSize = 0;
+            this.bttContentFurniture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttContentFurniture.Image = global::RPGMap.Properties.Resources.bttContentGen;
+            this.bttContentFurniture.Location = new System.Drawing.Point(855, 360);
+            this.bttContentFurniture.Name = "bttContentFurniture";
+            this.bttContentFurniture.Size = new System.Drawing.Size(34, 35);
+            this.bttContentFurniture.TabIndex = 45;
+            this.bttContentFurniture.UseVisualStyleBackColor = false;
+            this.bttContentFurniture.Click += new System.EventHandler(this.bttContentFurniture_Click);
+            this.bttContentFurniture.MouseEnter += new System.EventHandler(this.bttContentFurniture_MouseEnter);
             // 
             // Generar
             // 
@@ -455,6 +533,10 @@ namespace RPGMap
             this.BackgroundImage = global::RPGMap.Properties.Resources.untitled;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1155, 775);
+            this.Controls.Add(this.bttContentObjects);
+            this.Controls.Add(this.bttContentFurniture);
+            this.Controls.Add(this.bttContentRooms);
+            this.Controls.Add(this.bttContentEnemies);
             this.Controls.Add(this.sDoor);
             this.Controls.Add(this.bttDownSDoor);
             this.Controls.Add(this.bttUpSDoor);
@@ -488,6 +570,7 @@ namespace RPGMap
             this.Controls.Add(this.lbRaya2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1171, 814);
             this.MinimumSize = new System.Drawing.Size(1171, 814);
             this.Name = "Generar";
@@ -532,5 +615,9 @@ namespace RPGMap
         private System.Windows.Forms.Label sDoor;
         private System.Windows.Forms.Button bttDownSDoor;
         private System.Windows.Forms.Button bttUpSDoor;
+        private System.Windows.Forms.Button bttContentEnemies;
+        private System.Windows.Forms.Button bttContentRooms;
+        private System.Windows.Forms.Button bttContentObjects;
+        private System.Windows.Forms.Button bttContentFurniture;
     }
 }

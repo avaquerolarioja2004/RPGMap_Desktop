@@ -35,6 +35,13 @@ namespace RPGMap.dbRPGMap.entities
         public EnemyTable()
         {
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is EnemyTable table &&
+                   Name == table.Name &&
+                   Difficulty == table.Difficulty;
+        }
     }
 }
 

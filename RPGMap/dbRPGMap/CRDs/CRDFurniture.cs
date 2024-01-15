@@ -24,20 +24,16 @@ namespace RPGMap.dbRPGMap
                         // Si no existe, entonces agregar y guardar cambios
                         dbContext.furnitureTable.Add(furnitureTable);
                         dbContext.SaveChanges();
-
-                        Console.WriteLine("Mueble creado con éxito.");
                         return true;
                     }
                     else
                     {
-                        Console.WriteLine("Mueble ya existe en la base de datos.");
                         return false;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al crear el mueble: {ex.Message}");
                 return false;
             }
         }
@@ -70,17 +66,13 @@ namespace RPGMap.dbRPGMap
                     {
                         dbContext.furnitureTable.Remove(existingFurniture);
                         dbContext.SaveChanges();
-                        Console.WriteLine("Mueble eliminado con éxito.");
                         return true; // Eliminación exitosa
                     }
-
-                    Console.WriteLine("Mueble no encontrado en la base de datos.");
                     return false; // El mueble no fue encontrado
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al eliminar el mueble: {ex.Message}");
                 return false; // La eliminación falló
             }
         }

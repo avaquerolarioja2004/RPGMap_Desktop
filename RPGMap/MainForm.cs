@@ -1,5 +1,6 @@
 ﻿using RPGMap.dbRPGMap;
 using RPGMap.dbRPGMap.entities;
+using RPGMap.res.buttons;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 namespace RPGMap
 {
     public partial class RPGMap : Form{
-        private Utilities u = new Utilities();
+        private Fonts u = new Fonts();
 
         public RPGMap()
         {
@@ -30,7 +31,9 @@ namespace RPGMap
 
         private void bttCont_Click(object sender, EventArgs e)
         {
-
+            Content cont = new Content(this);
+            cont.Show();
+            this.Visible = false;
         }
 
         private void bttGen_Click(object sender, EventArgs e)

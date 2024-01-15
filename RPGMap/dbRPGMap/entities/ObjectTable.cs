@@ -28,5 +28,11 @@ namespace RPGMap.dbRPGMap.entities
         public ObjectTable()
         {
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is ObjectTable table &&
+                   Name == table.Name;
+        }
     }
 }
