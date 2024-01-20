@@ -19,7 +19,7 @@ namespace RPGMap.res
                         Click += (sender, args) =>
                         {
                             // Accede al objeto EnemyTable a través de los argumentos y agrégalo a la lista
-                            PopUpOutGen popUp = new PopUpOutGen(e);
+                            PopUpOutGen popUp = new PopUpOutGen();
                             popUp.ShowDialog();
                             if (popUp.borrado)
                             {
@@ -38,7 +38,7 @@ namespace RPGMap.res
                         Click += (sender, args) =>
                         {
                             // Accede al objeto RoomTable a través de los argumentos y agrégalo a la lista
-                            PopUpOutGen popUp = new PopUpOutGen(e);
+                            PopUpOutGen popUp = new PopUpOutGen();
                             popUp.ShowDialog();
                             if (popUp.borrado)
                             {
@@ -64,7 +64,7 @@ namespace RPGMap.res
                         Click += (sender, args) =>
                         {
                             // Accede al objeto FurnitureTable a través de los argumentos y agrégalo a la lista
-                            PopUpOutGen popUp = new PopUpOutGen(e);
+                            PopUpOutGen popUp = new PopUpOutGen();
                             popUp.ShowDialog();
                             if (popUp.borrado)
                             {
@@ -83,7 +83,7 @@ namespace RPGMap.res
                         Click += (sender, args) =>
                         {
                             // Accede al objeto ObjectTable a través de los argumentos y agrégalo a la lista
-                            PopUpOutGen popUp = new PopUpOutGen(e);
+                            PopUpOutGen popUp = new PopUpOutGen();
                             popUp.ShowDialog();
                             if (popUp.borrado)
                             {

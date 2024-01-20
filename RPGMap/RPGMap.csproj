@@ -150,11 +150,23 @@
     <Compile Include="Map.Designer.cs">
       <DependentUpon>Map.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUpAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpAdd.Designer.cs">
+      <DependentUpon>PopUpAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUpBorrado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PopUpBorrado.Designer.cs">
       <DependentUpon>PopUpBorrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpInformacion.Designer.cs">
+      <DependentUpon>PopUpInformacion.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUpOutGen.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,24 @@
     </Compile>
     <Compile Include="res\contenedor\ContDB.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\contenedor\ContentAddDB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\ControlsInigo\CellButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="res\ControlsInigo\ImagePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="res\ControlsInigo\ImagePicker.Designer.cs">
+      <DependentUpon>ImagePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="res\ControlsInigo\RoomPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="res\ControlsInigo\RoomPicker.Designer.cs">
+      <DependentUpon>RoomPicker.cs</DependentUpon>
     </Compile>
     <Compile Include="res\Methods.cs" />
     <Compile Include="res\buttons\TriButtonConfigContent.cs">
@@ -220,8 +250,14 @@
     <EmbeddedResource Include="Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PopUpAdd.resx">
+      <DependentUpon>PopUpAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopUpBorrado.resx">
       <DependentUpon>PopUpBorrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpInformacion.resx">
+      <DependentUpon>PopUpInformacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUpOutGen.resx">
       <DependentUpon>PopUpOutGen.cs</DependentUpon>
@@ -236,6 +272,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="res\ControlsInigo\ImagePicker.resx">
+      <DependentUpon>ImagePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\ControlsInigo\RoomPicker.resx">
+      <DependentUpon>RoomPicker.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -261,6 +303,7 @@
     <Content Include="res\imagenes\arrow.png" />
     <Content Include="res\imagenes\arrow_down.png" />
     <Content Include="res\imagenes\arrow_left.png" />
+    <Content Include="res\imagenes\backGroudAdd.png" />
     <Content Include="res\imagenes\boton_aniadir.png" />
     <Content Include="res\imagenes\info_grande.png" />
     <None Include="res\imagenes\boton_aniadir_grande.png" />
@@ -277,6 +320,8 @@
     <Content Include="res\imagenes\rectangle.png" />
     <Content Include="res\imagenes\rectangle_mini.png" />
     <Content Include="res\imagenes\rectangle_mini_mini.png" />
+    <Content Include="res\imagenes\rectangle_mini_mini_imagePicker.png" />
+    <Content Include="res\imagenes\rectangle_mini_mini_mini.png" />
     <Content Include="res\imagenes\tittle.png" />
     <Content Include="res\imagenes\untitled.png" />
     <Content Include="res\imagenes\popup.png" />

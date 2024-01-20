@@ -22,6 +22,20 @@ namespace RPGMap.res
             
         }
 
+        public static void IncrementarContador10(Label label, ref int contador)
+        {
+            int tiempoEspera = 185;
+            while (incrementando && contador < 10)
+            {
+                Thread.Sleep(tiempoEspera);
+                if (!incrementando) break;
+                contador++;
+                tiempoEspera = Math.Max(70, tiempoEspera - 8);
+                ActualizarContador(label, contador);
+            }
+
+        }
+
         public static void DecrementarContador(Label label, ref int contador)
         {
                 int tiempoEspera = 185;
@@ -67,20 +81,6 @@ namespace RPGMap.res
             {
                 // Estamos en el hilo de la interfaz de usuario, simplemente realizamos la operación
                 button.Visible = false;
-            }
-        }
-
-        public static void VerificarYActualizarVisibilidadBoton(Button buton, List<Object> list)
-        {
-            if (list.Count == 0)
-            {
-                // Si la lista está vacía, haz que el botón sea invisible
-                OcultarButton(buton);
-            }
-            else
-            {
-                // Si la lista tiene elementos, haz que el botón sea visible
-                MostrarButton(buton);
             }
         }
 

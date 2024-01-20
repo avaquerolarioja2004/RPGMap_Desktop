@@ -175,24 +175,6 @@ namespace RPGMap
         {
             Methods.incrementando = false;
         }
-
-        private void bttUpDif_Click(object sender, EventArgs e)
-        {
-            if (contDifficulty < 100)
-            {
-                contDifficulty++;
-                difficulty.Text = contDifficulty.ToString();
-            }
-        }
-
-        private void bttDownDif_Click(object sender, EventArgs e)
-        {
-            if (contDifficulty > 0)
-            {
-                contDifficulty--;
-                difficulty.Text = contDifficulty.ToString();
-            }
-        }
         private void bttAddEnemy_MouseEnter(object sender, EventArgs e)
         {
             bttAddEnemy.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -240,42 +222,6 @@ namespace RPGMap
         private void bttContentEnemies_MouseEnter(object sender, EventArgs e)
         {
             bttContentEnemies.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        }
-
-        private void bttUpCorr_Click(object sender, EventArgs e)
-        {
-            if (contCorridor < 100)
-            {
-                contCorridor++;
-                corridor.Text = contCorridor.ToString();
-            }
-        }
-
-        private void bttDownCorr_Click(object sender, EventArgs e)
-        {
-            if (contCorridor > 0)
-            {
-                contCorridor--;
-                corridor.Text = contCorridor.ToString();
-            }
-        }
-
-        private void bttUpSDoor_Click(object sender, EventArgs e)
-        {
-            if (contSDoor < 100)
-            {
-                contSDoor++;
-                sDoor.Text = contSDoor + "%";
-            }
-        }
-
-        private void bttDownSDoor_Click(object sender, EventArgs e)
-        {
-            if (contSDoor > 0)
-            {
-                contSDoor--;
-                sDoor.Text = contSDoor + "%";
-            }
         }
 
         private void bttContentObjects_Click(object sender, EventArgs e)
@@ -373,7 +319,7 @@ namespace RPGMap
         private async void bttDownSDoor_MouseDown(object sender, MouseEventArgs e)
         {
             Methods.decrementando = true;
-            await Task.Run(() => Methods.IncrementarContador(sDoor, ref contSDoor));
+            await Task.Run(() => Methods.DecrementarContador(sDoor, ref contSDoor));
         }
 
         private void bttDownSDoor_MouseUp(object sender, MouseEventArgs e)

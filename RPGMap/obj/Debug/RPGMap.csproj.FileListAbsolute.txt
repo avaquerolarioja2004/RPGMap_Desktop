@@ -66,3 +66,7 @@ C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.CoreCom
 C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.csproj.CopyComplete
 C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.exe
 C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.pdb
+C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.PopUpAdd.resources
+C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\CustomControls.Controls.ImagePicker.resources
+C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\CustomControls.Controls.RoomPicker.resources
+C:\Users\mrpox\OneDrive\Escritorio\RPGMap\RPGMap\obj\Debug\RPGMap.PopUpInformacion.resources

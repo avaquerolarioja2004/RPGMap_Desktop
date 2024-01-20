@@ -44,10 +44,9 @@ namespace RPGMap
             this.bttLeft.FlatAppearance.BorderSize = 0;
             this.bttLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttLeft.Image = global::RPGMap.Properties.Resources.arrow_left;
-            this.bttLeft.Location = new System.Drawing.Point(52, 849);
-            this.bttLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.bttLeft.Location = new System.Drawing.Point(39, 690);
             this.bttLeft.Name = "bttLeft";
-            this.bttLeft.Size = new System.Drawing.Size(81, 75);
+            this.bttLeft.Size = new System.Drawing.Size(61, 61);
             this.bttLeft.TabIndex = 4;
             this.bttLeft.UseVisualStyleBackColor = false;
             this.bttLeft.Click += new System.EventHandler(this.bttLeft_Click);
@@ -58,10 +57,9 @@ namespace RPGMap
             this.lbTittle.AutoSize = true;
             this.lbTittle.BackColor = System.Drawing.Color.Transparent;
             this.lbTittle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTittle.Location = new System.Drawing.Point(652, 11);
-            this.lbTittle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTittle.Location = new System.Drawing.Point(489, 9);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(441, 97);
+            this.lbTittle.Size = new System.Drawing.Size(349, 78);
             this.lbTittle.TabIndex = 7;
             this.lbTittle.Text = "CONTENIDO";
             // 
@@ -70,10 +68,9 @@ namespace RPGMap
             this.lbRaya.AutoSize = true;
             this.lbRaya.BackColor = System.Drawing.Color.Transparent;
             this.lbRaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRaya.Location = new System.Drawing.Point(241, 49);
-            this.lbRaya.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbRaya.Location = new System.Drawing.Point(181, 40);
             this.lbRaya.Name = "lbRaya";
-            this.lbRaya.Size = new System.Drawing.Size(1050, 69);
+            this.lbRaya.Size = new System.Drawing.Size(834, 55);
             this.lbRaya.TabIndex = 8;
             this.lbRaya.Text = "______________________________";
             // 
@@ -83,12 +80,13 @@ namespace RPGMap
             this.bttAdd.FlatAppearance.BorderSize = 0;
             this.bttAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttAdd.Image = global::RPGMap.Properties.Resources.boton_aniadir;
-            this.bttAdd.Location = new System.Drawing.Point(1128, 42);
-            this.bttAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.bttAdd.Location = new System.Drawing.Point(846, 34);
             this.bttAdd.Name = "bttAdd";
-            this.bttAdd.Size = new System.Drawing.Size(45, 46);
+            this.bttAdd.Size = new System.Drawing.Size(34, 37);
             this.bttAdd.TabIndex = 34;
             this.bttAdd.UseVisualStyleBackColor = false;
+            this.bttAdd.Click += new System.EventHandler(this.bttAdd_Click);
+            this.bttAdd.MouseEnter += new System.EventHandler(this.bttAdd_MouseEnter);
             // 
             // bttInfo
             // 
@@ -96,30 +94,30 @@ namespace RPGMap
             this.bttInfo.FlatAppearance.BorderSize = 0;
             this.bttInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttInfo.Image = global::RPGMap.Properties.Resources.info;
-            this.bttInfo.Location = new System.Drawing.Point(573, 42);
-            this.bttInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.bttInfo.Location = new System.Drawing.Point(430, 34);
             this.bttInfo.Name = "bttInfo";
-            this.bttInfo.Size = new System.Drawing.Size(45, 46);
+            this.bttInfo.Size = new System.Drawing.Size(34, 37);
             this.bttInfo.TabIndex = 35;
             this.bttInfo.UseVisualStyleBackColor = false;
+            this.bttInfo.Click += new System.EventHandler(this.bttInfo_Click);
+            this.bttInfo.MouseEnter += new System.EventHandler(this.bttInfo_MouseEnter);
             // 
             // Content
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RPGMap.Properties.Resources.untitled;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1537, 944);
+            this.ClientSize = new System.Drawing.Size(1154, 774);
             this.Controls.Add(this.bttInfo);
             this.Controls.Add(this.bttAdd);
             this.Controls.Add(this.lbTittle);
             this.Controls.Add(this.lbRaya);
             this.Controls.Add(this.bttLeft);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1555, 991);
-            this.MinimumSize = new System.Drawing.Size(1555, 991);
+            this.MaximumSize = new System.Drawing.Size(1170, 813);
+            this.MinimumSize = new System.Drawing.Size(1170, 813);
             this.Name = "Content";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RPGMap";

@@ -103,6 +103,16 @@ namespace RPGMap.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backGroudAdd {
+            get {
+                object obj = ResourceManager.GetObject("backGroudAdd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_aniadir {
             get {
                 object obj = ResourceManager.GetObject("boton_aniadir", resourceCulture);
@@ -256,6 +266,26 @@ namespace RPGMap.Properties {
         internal static System.Drawing.Bitmap rectangle_mini_mini {
             get {
                 object obj = ResourceManager.GetObject("rectangle_mini_mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rectangle_mini_mini_imagePicker {
+            get {
+                object obj = ResourceManager.GetObject("rectangle_mini_mini_imagePicker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rectangle_mini_mini_mini {
+            get {
+                object obj = ResourceManager.GetObject("rectangle_mini_mini_mini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

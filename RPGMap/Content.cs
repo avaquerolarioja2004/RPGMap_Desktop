@@ -14,6 +14,7 @@ namespace RPGMap
     public partial class Content : Form
     {
         private RPGMap rpgMap;
+        public char tipe;
         public Content(RPGMap rpgMap)
         {
             InitializeComponent();
@@ -42,6 +43,28 @@ namespace RPGMap
         private void bttLeft_MouseEnter(object sender, EventArgs e)
         {
             bttLeft.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void bttInfo_MouseEnter(object sender, EventArgs e)
+        {
+            bttInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void bttAdd_MouseEnter(object sender, EventArgs e)
+        {
+            bttAdd.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void bttAdd_Click(object sender, EventArgs e)
+        {
+            PopUpAdd p = new PopUpAdd(this);
+            p.ShowDialog();
+        }
+
+        private void bttInfo_Click(object sender, EventArgs e)
+        {
+            PopUpInformacion p = new PopUpInformacion(this);
+            p.ShowDialog();
         }
     }
 }

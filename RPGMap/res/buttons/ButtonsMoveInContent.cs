@@ -49,6 +49,7 @@ namespace RPGMap.res.buttons
             this.BorderStyle = BorderStyle.FixedSingle;
             this.Padding = new Padding(3);
             this.Size = new Size(80, 250);
+            this.content.tipe = 'R';
 
             rooms = new Button();
             ConfigureButton(rooms, Properties.Resources.icono_salas, 'R', label, bttInfo, bttAdd);
@@ -100,6 +101,7 @@ namespace RPGMap.res.buttons
                     container4.Visible = false;
                     container3.Visible = false;
                     container2.Visible = false;
+                    this.content.tipe = 'R';
                     break;
 
                 case 'E':
@@ -113,6 +115,7 @@ namespace RPGMap.res.buttons
                     container4.Visible = false;
                     container3.Visible = false;
                     container1.Visible = false;
+                    this.content.tipe = 'E';
                     break;
 
                 case 'F':
@@ -126,6 +129,7 @@ namespace RPGMap.res.buttons
                     container4.Visible = false;
                     container3.Visible = true;
                     container1.Visible = false;
+                    this.content.tipe = 'F';
                     break;
 
                 case 'O':
@@ -139,6 +143,7 @@ namespace RPGMap.res.buttons
                     container4.Visible = true;
                     container3.Visible = false;
                     container1.Visible = false;
+                    this.content.tipe = 'O';
                     break;
 
                 default:

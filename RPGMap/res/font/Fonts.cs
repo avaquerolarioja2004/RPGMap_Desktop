@@ -17,6 +17,8 @@ namespace RPGMap
         private Font fontText;
         private Font fontButtonMini;
         private Font fontButtonSelectCont;
+        private Font fontBttRoomPicker;
+        private Font fontLbRoomPicker;
 
         public Fonts()
         {
@@ -28,6 +30,18 @@ namespace RPGMap
             fontText = new Font(privateFont.Families[1], 24);
             fontButtonMini = new Font(privateFont.Families[1], 26);
             fontButtonSelectCont = new Font(privateFont.Families[1], 14);
+            fontBttRoomPicker= new Font(privateFont.Families[1], 12);
+            fontLbRoomPicker = new Font(privateFont.Families[1], 14);
+        }
+
+        public Font getFontLbRoomPicker()
+        {
+            return fontLbRoomPicker;
+        }
+
+        public Font getFontBttRoomPicker()
+        {
+            return fontBttRoomPicker;
         }
 
         public Font getFontBttContent()
