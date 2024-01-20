@@ -29,7 +29,7 @@ namespace RPGMap.res.contenedor
                 {
                     this.p.X = x;
                     this.p.Y = y;
-                    MessageBox.Show($"Tamaño seleccionado de: {x}, {y} Aceptado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Tamaño seleccionado de: {x}, {y}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
                 this.Controls.Add(rp);
             }
