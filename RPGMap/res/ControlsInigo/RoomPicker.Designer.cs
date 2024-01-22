@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.table = new System.Windows.Forms.TableLayoutPanel();
-            this.submit_btn = new System.Windows.Forms.Button();
             this.clear_btn = new System.Windows.Forms.Button();
             this.labelX = new System.Windows.Forms.Label();
             this.labelY = new System.Windows.Forms.Label();
@@ -67,16 +66,6 @@
             this.table.Size = new System.Drawing.Size(400, 400);
             this.table.TabIndex = 0;
             // 
-            // submit_btn
-            // 
-            this.submit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submit_btn.Location = new System.Drawing.Point(463, 261);
-            this.submit_btn.Name = "submit_btn";
-            this.submit_btn.Size = new System.Drawing.Size(75, 37);
-            this.submit_btn.TabIndex = 1;
-            this.submit_btn.Text = "OK";
-            this.submit_btn.UseVisualStyleBackColor = true;
-            // 
             // clear_btn
             // 
             this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -93,7 +82,7 @@
             this.labelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX.Location = new System.Drawing.Point(468, 107);
             this.labelX.Name = "labelX";
-            this.labelX.Size = new System.Drawing.Size(25, 17);
+            this.labelX.Size = new System.Drawing.Size(30, 20);
             this.labelX.TabIndex = 3;
             this.labelX.Text = "X :";
             // 
@@ -103,7 +92,7 @@
             this.labelY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelY.Location = new System.Drawing.Point(468, 148);
             this.labelY.Name = "labelY";
-            this.labelY.Size = new System.Drawing.Size(25, 17);
+            this.labelY.Size = new System.Drawing.Size(29, 20);
             this.labelY.TabIndex = 4;
             this.labelY.Text = "Y :";
             // 
@@ -113,7 +102,7 @@
             this.valueX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valueX.Location = new System.Drawing.Point(504, 107);
             this.valueX.Name = "valueX";
-            this.valueX.Size = new System.Drawing.Size(16, 17);
+            this.valueX.Size = new System.Drawing.Size(18, 20);
             this.valueX.TabIndex = 5;
             this.valueX.Text = "0";
             // 
@@ -123,7 +112,7 @@
             this.valueY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valueY.Location = new System.Drawing.Point(503, 148);
             this.valueY.Name = "valueY";
-            this.valueY.Size = new System.Drawing.Size(16, 17);
+            this.valueY.Size = new System.Drawing.Size(18, 20);
             this.valueY.TabIndex = 6;
             this.valueY.Text = "0";
             // 
@@ -136,7 +125,6 @@
             this.Controls.Add(this.labelY);
             this.Controls.Add(this.labelX);
             this.Controls.Add(this.clear_btn);
-            this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.table);
             this.MaximumSize = new System.Drawing.Size(600, 406);
             this.MinimumSize = new System.Drawing.Size(600, 406);
@@ -151,7 +139,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel table;
-        private System.Windows.Forms.Button submit_btn;
         private System.Windows.Forms.Button clear_btn;
         private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Label labelY;

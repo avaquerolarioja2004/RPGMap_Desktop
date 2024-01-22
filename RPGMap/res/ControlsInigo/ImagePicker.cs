@@ -14,7 +14,6 @@ namespace CustomControls.Controls
 {
     public partial class ImagePicker : UserControl
     {
-        public Action<byte[]> OnSubmit { get; set; }
         private Fonts f;
 
         public Image Image { get; private set; }
@@ -69,23 +68,6 @@ namespace CustomControls.Controls
             };
 
             clear.Click += (s, e) => SetImage(null);
-
-            submit.Click += (s, e) =>
-            {
-                if(Image != null)
-                {
-                    using(var ms = new MemoryStream())
-                    {
-                        Image.Save(ms, Image.RawFormat);
-                        OnSubmit?.Invoke(ms.ToArray());
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No hay una imagen seleccionada", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            };
         }
 
         private void SetImage(string file)
@@ -116,10 +98,8 @@ namespace CustomControls.Controls
         {
             this.browse.Font = f.getFontBttRoomPicker();
             this.clear.Font = f.getFontBttRoomPicker();
-            this.submit.Font = f.getFontBttRoomPicker();
             this.browse.BackgroundImage = RPGMap.Properties.Resources.rectangle_mini_mini_imagePicker;
             this.clear.BackgroundImage = RPGMap.Properties.Resources.rectangle_mini_mini_imagePicker;
-            this.submit.BackgroundImage = RPGMap.Properties.Resources.rectangle_mini_mini_imagePicker;
             this.label.Font = f.getFontLbRoomPicker();
         }
     }

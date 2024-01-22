@@ -12,9 +12,9 @@ namespace CustomControls.Controls
 
         public Color UnSelected { get; set; }
         public Color Selected { get; set; }
-        public Action<int, int> OnSubmit { get; set; }
 
-        private int x, y;
+        public int X { get; private set; }
+        public int Y { get; private set; }
 
         public RoomPicker()
         {
@@ -22,7 +22,7 @@ namespace CustomControls.Controls
             f = new Fonts();
             UnSelected = Color.White;
             Selected = Color.LightSkyBlue;
-            x = y = 0;
+            X = Y = 0;
             
             for (int i = 0; i < size; i++)
             {
@@ -42,15 +42,15 @@ namespace CustomControls.Controls
                     button.Click += (s, e) => {
                         CellButton b = (CellButton) s;
 
-                        PaintCells(UnSelected, 0, x, 0, y);
+                        PaintCells(UnSelected, 0, X, 0, Y);
 
-                        x = Math.Max(1, Math.Min(b.X, size));
-                        y = Math.Max(1, Math.Min(b.Y, size));
+                        X = Math.Max(1, Math.Min(b.X, size));
+                        Y = Math.Max(1, Math.Min(b.Y, size));
 
-                        valueX.Text = x.ToString();
-                        valueY.Text = y.ToString();
+                        valueX.Text = X.ToString();
+                        valueY.Text = Y.ToString();
 
-                        PaintCells(Selected, 0, x, 0, y);
+                        PaintCells(Selected, 0, X, 0, Y);
                     };
 
                     table.Controls.Add(button, i, j);
@@ -58,21 +58,9 @@ namespace CustomControls.Controls
             }
 
             clear_btn.Click += (s, e) => {
-                PaintCells(UnSelected, 0, x, 0, y);
+                PaintCells(UnSelected, 0, X, 0, Y);
                 valueX.Text = valueY.Text = "0";
-                x = y = 0;
-            };
-
-            submit_btn.Click += (s, e) => {
-                if(x + y > 0)
-                {
-                    OnSubmit?.Invoke(x, y);
-                }
-                else
-                {
-                    MessageBox.Show("Selecciona un tamaño para la sala", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                X = Y = 0;
             };
         }
 
@@ -81,10 +69,8 @@ namespace CustomControls.Controls
             this.BackColor = Color.Transparent;
             this.BackgroundImageLayout = ImageLayout.None;
             this.clear_btn.Font = f.getFontBttRoomPicker();
-            this.submit_btn.Font = f.getFontBttRoomPicker();
             
             this.clear_btn.BackgroundImage= RPGMap.Properties.Resources.rectangle_mini_mini_mini;
-            this.submit_btn.BackgroundImage = RPGMap.Properties.Resources.rectangle_mini_mini_mini;
             
             this.labelY.Font = f.getFontLbRoomPicker();
             this.valueY.Font = f.getFontLbRoomPicker();

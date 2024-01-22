@@ -98,8 +98,7 @@ namespace RPGMap
 
         private void bttRigth_Click(object sender, EventArgs e)
         {
-            Map m = new Map(this, listaEnemy, listaFurnitureAux, listaObjectAux, listaRoomAux, contDifficulty, contCorridor, contSDoor);
-            m.Show();
+            new Map(this, getJson()).Show();
             Visible = false;
         }
 
@@ -325,6 +324,70 @@ namespace RPGMap
         private void bttDownSDoor_MouseUp(object sender, MouseEventArgs e)
         {
             Methods.decrementando = false;
+        }
+
+        private string getJson()
+        {
+            StringBuilder json = new StringBuilder("{\"rooms\":[");
+
+
+            if (listaRoomAux.Count() > 0)
+            {
+                foreach(var room in listaRoomAux)
+                {
+                    json.Append("{\"w\":").Append(room.Room.X)
+                        .Append(",\"h\":").Append(room.Room.Y)
+                        .Append(",\"q\":").Append(room.SomeIntProperty)
+                        .Append("},");
+                }
+
+                json.Length--;
+            }
+
+            json.Append("],\"enemy_ids\":[");
+
+            if (listaEnemy.Count() > 0)
+            {
+                foreach(var enemy in listaEnemy)
+                {
+                    json.Append(enemy.Id).Append(',');
+                }
+
+                json.Length--;
+            }
+
+            json.Append("],\"objects\":[");
+
+            if(listaObjectAux.Count() > 0)
+            {
+                foreach(var @object in listaObjectAux)
+                {
+                    json.Append("{\"id\":").Append(@object.ObjectAux.Id)
+                        .Append(",\"q\":").Append(@object.SomeIntProperty)
+                        .Append("},");
+                }
+
+                json.Length--;
+            }
+
+            json.Append("],\"furniture\":[");
+
+            if (listaFurnitureAux.Count() > 0)
+            {
+                foreach (var furniture in listaFurnitureAux)
+                {
+                    json.Append("{\"id\":").Append(furniture.Furniture.Id)
+                        .Append(",\"q\":").Append(furniture.SomeIntProperty)
+                        .Append("},");
+                }
+
+                json.Length--;
+            }
+
+            return json.Append("],\"difficulty\":").Append(contDifficulty)
+                .Append(",\"corridors\":").Append(contCorridor)
+                .Append(",\"secret_ratio\":").Append(contSDoor)
+            .Append("}").ToString();
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using CustomControls.Controls;
+using System.Runtime.ConstrainedExecution;
+using System.IO;
 
 namespace RPGMap.res.contenedor
 {
@@ -23,15 +25,14 @@ namespace RPGMap.res.contenedor
             this.BackgroundImageLayout= ImageLayout.None;
             if (tipe == 'R')
             {
-                RoomPicker rp = new RoomPicker();
-                rp.Location = new Point(167, 28);
-                rp.OnSubmit += (x, y) =>
+                RoomPicker roomPicker = new RoomPicker
                 {
-                    this.p.X = x;
-                    this.p.Y = y;
-                    MessageBox.Show($"Tamaño seleccionado de: {x}, {y}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Location = new Point(167, 28)
                 };
-                this.Controls.Add(rp);
+
+                p.DimProvider = () => (roomPicker.X, roomPicker.Y);
+
+                Controls.Add(roomPicker);
             }
             else if (tipe == 'O')
             {
@@ -54,6 +55,13 @@ namespace RPGMap.res.contenedor
                 ImagePicker imagePicker = new ImagePicker();
                 imagePicker.Location = new Point(nameTextBox.Right + 50, 48);
                 this.Controls.Add(imagePicker);
+                
+                p.ImageProvider = () => {
+                    MemoryStream ms = new MemoryStream();
+                    Image image = imagePicker.Image;
+                    image.Save(ms, image.RawFormat);
+                    return ms.ToArray();
+                };
 
                 // Add space between the TextBox and ImagePicker
                 int spacing = 20;
@@ -62,11 +70,6 @@ namespace RPGMap.res.contenedor
                 nameTextBox.TextChanged += (sender, e) =>
                 {
                     this.p.name = nameTextBox.Text;
-                };
-                imagePicker.OnSubmit += (imageData) =>
-                {
-                    this.p.image = imageData;
-                    MessageBox.Show("Imagen seleccionada", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
             }
             else if (tipe == 'E')
@@ -167,12 +170,15 @@ namespace RPGMap.res.contenedor
                 // ImagePicker centered beneath TextBox
                 ImagePicker imagePicker = new ImagePicker();
                 imagePicker.Location = new Point(bttDown.Right + 25, 48);
-                this.Controls.Add(imagePicker);
-                imagePicker.OnSubmit += (imageData) =>
-                {
-                    this.p.image = imageData;
-                    MessageBox.Show("Imagen seleccionada", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                p.ImageProvider = () => {
+                    MemoryStream ms = new MemoryStream();
+                    Image image = imagePicker.Image;
+                    image.Save(ms, image.RawFormat);
+                    return ms.ToArray();
                 };
+
+                this.Controls.Add(imagePicker);
                 textBoxE.TextChanged += (sender, e) =>
                 {
                     this.p.name = textBoxE.Text;
@@ -370,11 +376,13 @@ namespace RPGMap.res.contenedor
                 imagePicker.Location = new Point(cubreVisibilidadCheckBox.Right + 15, 48);
                 this.Controls.Add(imagePicker);
 
-                imagePicker.OnSubmit += (imageData) =>
-                {
-                    this.p.image = imageData;
-                    MessageBox.Show("Imagen seleccionada", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                p.ImageProvider = () => {
+                    MemoryStream ms = new MemoryStream();
+                    Image image = imagePicker.Image;
+                    image.Save(ms, image.RawFormat);
+                    return ms.ToArray();
                 };
+
                 textBoxF.TextChanged += (sender, e) =>
                 {
                     this.p.name = textBoxF.Text;

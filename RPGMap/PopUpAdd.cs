@@ -1,13 +1,6 @@
 ﻿using RPGMap.dbRPGMap;
 using RPGMap.res.contenedor;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RPGMap
@@ -19,7 +12,8 @@ namespace RPGMap
         public int X, Y, difficulty;
         public String name;
         public bool covers;
-        public byte[] image;
+        public Func<byte[]> ImageProvider;
+        public Func<(int, int)> DimProvider;
        
         public PopUpAdd(Content content)
         {
@@ -61,9 +55,10 @@ namespace RPGMap
             switch (content.tipe)
             {
                 case 'R':
-                    if (X != 0 && Y != 0)
+                    var dim = DimProvider();
+                    if (dim.Item1 != 0 && dim.Item2 != 0)
                     {
-                        if (CRDRoom.CrearSala(X, Y))
+                        if (CRDRoom.CrearSala(dim.Item1, dim.Item2))
                         {
                             MessageBox.Show("Sala añadida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Dispose();
@@ -79,9 +74,9 @@ namespace RPGMap
                     }
                     break;
                 case 'F':
-                    if (!string.IsNullOrEmpty(name) && X != 0 && Y != 0 && image != null)
+                    if (!string.IsNullOrEmpty(name) && X != 0 && Y != 0 && ImageProvider != null)
                     {
-                        if (CRDFurniture.InsertFurniture(new dbRPGMap.entities.FurnitureTable(name, X, Y, image, covers)))
+                        if (CRDFurniture.InsertFurniture(new dbRPGMap.entities.FurnitureTable(name, X, Y, ImageProvider(), covers)))
                         {
                             MessageBox.Show("Mueble añadido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Dispose();
@@ -97,9 +92,9 @@ namespace RPGMap
                     }
                     break;
                 case 'O':
-                    if (!string.IsNullOrEmpty(name) && image != null)
+                    if (!string.IsNullOrEmpty(name) && ImageProvider != null)
                     {
-                        if (CRDObject.InsertObject(new dbRPGMap.entities.ObjectTable(name, image)))
+                        if (CRDObject.InsertObject(new dbRPGMap.entities.ObjectTable(name, ImageProvider())))
                         {
                             MessageBox.Show("Objeto añadido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Dispose();
@@ -115,9 +110,9 @@ namespace RPGMap
                     }
                     break;
                 case 'E':
-                    if (!string.IsNullOrEmpty(name) && image != null)
+                    if (!string.IsNullOrEmpty(name) && ImageProvider != null)
                     {
-                        if (CRDEnemy.InsertEnemy(new dbRPGMap.entities.EnemyTable(name, difficulty, image)))
+                        if (CRDEnemy.InsertEnemy(new dbRPGMap.entities.EnemyTable(name, difficulty, ImageProvider())))
                         {
                             MessageBox.Show("Enemigo añadido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Dispose();
